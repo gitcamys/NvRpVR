@@ -43,6 +43,7 @@ public class UFOAbduction : MonoBehaviour
 
     private int saved;  // vacas salvas
     private int lost;   // vacas perdidas
+    [SerializeField] private float EsperandoOvni =20f;
 
     private void Start()
     {
@@ -65,7 +66,7 @@ public class UFOAbduction : MonoBehaviour
     private IEnumerator GameLoop()
     {
         // espera um pouquinho antes de começar
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(EsperandoOvni);
 
         // repete até salvar vacas suficientes
         while (saved < cowsToSave)
